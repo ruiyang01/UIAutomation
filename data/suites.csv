@@ -1,3 +1,3 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","2187","Test Case 8: Verify All Products and product detail page @smoke","smoke","Tue Jul 29 19:48:36 UTC 2025","passed","Tue Jul 29 19:48:38 UTC 2025","","test-case-08-verify-all-products.spec.js","",""
-"","2097","Test Case 7: Verify Test Cases Page @smoke","smoke","Tue Jul 29 19:48:36 UTC 2025","passed","Tue Jul 29 19:48:38 UTC 2025","","test-case-07-verify-test-cases-page.spec.js","",""
+"","1996","Test Case 7: Verify Test Cases Page @smoke","smoke","Tue Jul 29 19:57:21 UTC 2025","passed","Tue Jul 29 19:57:23 UTC 2025","","test-case-07-verify-test-cases-page.spec.js","",""
+"","1639","Test Case 8: Verify All Products and product detail page @smoke","smoke","Tue Jul 29 19:57:21 UTC 2025","passed","Tue Jul 29 19:57:22 UTC 2025","","test-case-08-verify-all-products.spec.js","",""
