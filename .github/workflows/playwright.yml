@@ -59,6 +59,8 @@ jobs:
           else
             echo "⚠️ No history folder created yet."
           fi
+      - name: 🐞 Confirm copied files
+        run: ls -la .allure-history
 
       # - name: 💾 Save new Allure history
       #   run: |
