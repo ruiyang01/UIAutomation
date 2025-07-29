@@ -25,6 +25,7 @@ jobs:
         with:
           name: allure-history
           path: .allure-history
+        continue-on-error: true  
 
       - name: 🧪 Run Playwright tests
         run: npm run test:smoke
