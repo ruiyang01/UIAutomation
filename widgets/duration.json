@@ -1,1 +1,1 @@
-[{"uid":"87277473ad5ad096","name":"Test Case 7: Verify Test Cases Page @smoke","time":{"start":1753814174439,"stop":1753814177717,"duration":3278},"status":"passed","severity":"normal"}]
+[{"uid":"a1e448835c76d7","name":"Test Case 8: Verify All Products and product detail page @smoke","time":{"start":1753815999558,"stop":1753816002228,"duration":2670},"status":"passed","severity":"normal"},{"uid":"a6dcdc7b8277c176","name":"Test Case 7: Verify Test Cases Page @smoke","time":{"start":1753815999551,"stop":1753816001824,"duration":2273},"status":"passed","severity":"normal"}]
