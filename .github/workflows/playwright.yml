@@ -53,17 +53,22 @@ jobs:
           if [ -d allure-report/history ]; then
             echo "✅ History found:"
             ls -la allure-report/history
+            cp -r allure-report/history .allure-history
+            echo "✅ History copied:"
+            ls -la .allure-history
           else
             echo "⚠️ No history folder created yet."
           fi
 
-      - name: 💾 Save new Allure history
-        run: |
-          if [ -d allure-report/history ]; then
-            cp -r allure-report/history .allure-history
-          else
-            echo "⚠️ Skipping copy, no history generated."  
-          fi
+      # - name: 💾 Save new Allure history
+      #   run: |
+      #     if [ -d allure-report/history ]; then
+      #       cp -r allure-report/history .allure-history
+      #       echo "✅ History copied:"
+      #       ls -la .allure-history
+      #     else
+      #       echo "⚠️ Skipping copy, no history generated."  
+      #     fi
 
       - name: ⬆️ Upload Allure history for next run
         uses: actions/upload-artifact@v4
