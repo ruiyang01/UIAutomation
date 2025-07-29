@@ -6,6 +6,7 @@ class HomePage {
     this.page = page;
     this.signupLoginButton = page.locator('a:has-text("Signup / Login")');
     this.testCasesButton = page.getByRole('link', { name: 'Test Cases', exact: true });
+    this.productsButton = page.locator('a[href="/products"]');
 
     this.homeBody = page.locator('body');
     // Try multiple selectors for consent dialogs/buttons
@@ -56,6 +57,11 @@ class HomePage {
   async clickTestCases() {
     await this.closeConsentDialogIfPresent();
     await this.testCasesButton.click();
+  }
+
+  async clickProducts() {
+    await this.closeConsentDialogIfPresent();
+    await this.productsButton.click();
   }
 }
 
