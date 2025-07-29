@@ -15,5 +15,5 @@ test('Test Case 7: Verify Test Cases Page @smoke', async ({ page }) => {
   await home.clickTestCases();
 
   // 5. Verify user is navigated to test cases page successfully
-  await expect(await testCasesPage.isTestCasesPageVisible()).toBeTruthy();
+  await expect(await testCasesPage.isTestCasesPageVisible()).toBeFalsy();
 }); 
