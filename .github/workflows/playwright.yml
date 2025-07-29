@@ -48,10 +48,21 @@ jobs:
           name: allure-report
           path: allure-report
 
+      - name: 🔍 Debug list allure-report/history
+        run: |
+          if [ -d allure-report/history ]; then
+            echo "✅ History found:"
+            ls -la allure-report/history
+          else
+            echo "⚠️ No history folder created yet."
+          fi
+
       - name: 💾 Save new Allure history
         run: |
           if [ -d allure-report/history ]; then
             cp -r allure-report/history .allure-history
+          else
+            echo "⚠️ Skipping copy, no history generated."  
           fi
 
       - name: ⬆️ Upload Allure history for next run
