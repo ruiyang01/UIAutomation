@@ -81,7 +81,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: allure-history
-          path: ${{ github.workspace }}/.allure-history
+          path: .allure-history
+          include-hidden-files: true
 
       - name: 🚀 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
