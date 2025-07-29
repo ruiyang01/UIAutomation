@@ -1,0 +1,4 @@
+node_modules
+*allure*
+test-results
+package-lock.json
