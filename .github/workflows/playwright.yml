@@ -23,14 +23,6 @@ jobs:
       - name: 📥 Install Playwright browsers
         run: npx playwright install
 
-      # - name: 📥 Download Allure history
-      #   uses: actions/download-artifact@v4
-      #   with:
-      #     name: allure-history
-      #     path: .allure-history
-      #   continue-on-error: true  
-
-
       - name: 📥 Pull previous Allure history from gh-pages
         run: |
           git config --global user.name "github-actions[bot]"
@@ -48,35 +40,8 @@ jobs:
       - name: 🧪 Run Playwright tests
         run: npm run test:smoke
 
-      # - name: 🔁 Restore Allure history
-      #   run: |
-      #     if [ -d .allure-history ]; then
-      #       cp -r .allure-history allure-results/history
-      #     fi
-
       - name: 🧾 Generate Allure report
         run: npx allure generate allure-results --clean -o allure-report
-
-      # - name: 📂 Upload Allure HTML report (artifact)
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: allure-report
-      #     path: allure-report
-#  
-      # - name: 💾 Save new Allure history
-      #   run: |
-      #     if [ -d allure-report/history ]; then
-      #       cp -r allure-report/history .allure-history
-      #     else
-      #       echo "⚠️ Skipping copy, no history generated."  
-      #     fi
-      # 
-      # - name: ⬆️ Upload Allure history for next run
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: allure-history
-      #     path: .allure-history
-      #     include-hidden-files: true
 
       - name: 📤 Push updated Allure history to gh-pages
         run: |
