@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","2416","Test Case 8: Verify All Products and product detail page @smoke","smoke","Wed Jul 30 14:59:40 UTC 2025","passed","Wed Jul 30 14:59:43 UTC 2025","","test-case-08-verify-all-products.spec.ts","",""
+"","2186","Test Case 7: Verify Test Cases Page @smoke","smoke","Wed Jul 30 14:59:40 UTC 2025","failed","Wed Jul 30 14:59:43 UTC 2025","","test-case-07-verify-test-cases-page.spec.ts","",""
