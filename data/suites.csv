@@ -1,3 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","2261","Test Case 8: Verify All Products and product detail page @smoke","smoke","Tue Jul 29 21:36:14 UTC 2025","passed","Tue Jul 29 21:36:16 UTC 2025","","test-case-08-verify-all-products.spec.js","",""
-"","1986","Test Case 7: Verify Test Cases Page @smoke","smoke","Tue Jul 29 21:36:14 UTC 2025","failed","Tue Jul 29 21:36:16 UTC 2025","","test-case-07-verify-test-cases-page.spec.js","",""
