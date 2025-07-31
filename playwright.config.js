@@ -12,6 +12,7 @@ const config = {
     // screenshot: 'only-on-failure',
     baseURL: 'http://automationexercise.com',
   },
+  globalTeardown: './globalTeardown.ts',
   projects: [
     {
       name: 'smoke',
@@ -22,6 +23,7 @@ const config = {
   reporter: [
     ['list'], 
     ['html'],
+    ['json', { outputFile: 'playwright-report/test-results.json' }],
     ['allure-playwright']
   ],
   

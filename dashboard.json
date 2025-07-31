@@ -1,0 +1,73 @@
+{
+    "id": null,
+    "title": "Playwright Test Metrics",
+    "tags": ["playwright", "qa", "prometheus"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "type": "stat",
+        "title": "Test Failures",
+        "targets": [
+          {
+            "expr": "playwright_test_failures_total",
+            "format": "time_series",
+            "interval": "",
+            "legendFormat": "{{branch}}",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "short",
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                { "color": "green", "value": null },
+                { "color": "red", "value": 1 }
+              ]
+            },
+            "color": {
+              "mode": "thresholds"
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 }
+      },
+      {
+        "type": "stat",
+        "title": "Test Duration (seconds)",
+        "targets": [
+          {
+            "expr": "playwright_test_duration_seconds",
+            "format": "time_series",
+            "interval": "",
+            "legendFormat": "{{branch}}",
+            "refId": "B"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "s",
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                { "color": "green", "value": null },
+                { "color": "orange", "value": 60 },
+                { "color": "red", "value": 120 }
+              ]
+            },
+            "color": {
+              "mode": "thresholds"
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 }
+      }
+    ],
+    "schemaVersion": 38,
+    "version": 1,
+    "refresh": "10s"
+  }
+  

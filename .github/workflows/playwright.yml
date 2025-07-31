@@ -1,4 +1,4 @@
-name: Playwright Tests + Allure Report + GitHub Pages
+name: Playwright Tests + Allure Report + GitHub Pages + Observability
 
 on:
   push:
@@ -7,6 +7,15 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
+    services:
+      docker:
+        image: docker:24.0.6
+        options: --privileged
+        ports:
+          - 9090:9090
+          - 9091:9091
+          - 3000:3000
 
     steps:
       - name: 📥 Checkout repo
@@ -18,7 +27,12 @@ jobs:
           node-version: 18
 
       - name: 🧪 Install dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Start Prometheus, Pushgateway, Grafana
+        run: |
+          docker compose -f docker-compose.yml up -d
+          sleep 15  # wait for services
 
       - name: 📥 Install Playwright browsers
         run: npx playwright install
