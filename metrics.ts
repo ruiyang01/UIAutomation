@@ -29,7 +29,7 @@ export async function pushPlaywrightMetrics(params: {
   failureGauge.set(failureCount);
 
   // Create Pushgateway instance
-  const gateway = new Pushgateway('http://localhost:9091');
+  const gateway = new Pushgateway('http://localhost:9095');
 
   // Push to Pushgateway using the default registry (internally managed)
   await gateway.pushAdd({
